@@ -98,16 +98,16 @@ int main() {
                         break;
                     } else {
                         std::cout << "Height must be greater than"
-                        "0 and less than or equal to 1000.\n";
+                        "0 and less than or equal to 1000.\n"; 
                     }
                 }
 
-                calculateVolume(base, height);  // Call function with user input
+                calculateVolume(base, height) ;  // Call function with user input 
                 break;
 
             } else {
-                std::cout << "Please type only 'yes' or 'no'.\n";
+                std::cout << "Please type only 'yes' or 'no'.\n"; 
             }
         }
     }
-}  // More style placeholder
+} // Using 
