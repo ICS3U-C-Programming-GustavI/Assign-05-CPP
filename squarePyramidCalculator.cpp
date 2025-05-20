@@ -108,6 +108,6 @@ int main() {
             } else {
                 std::cout << "Please type only 'yes' or 'no'.\n";
             }
-        }
-    }
-}
+        } // / 1
+    }  // /2
+}  // /2
