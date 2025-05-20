@@ -16,30 +16,29 @@ const float MIN_VALUE = 0.0;
 void calculateVolume(float base, float height) {
     float volume = (1.0 / 3.0) * base * base * height;
     std::cout << "Volume of the square pyramid: "
-    << volume << " cubic units.\n";
+              << volume << " cubic units.\n";
 }
 
 // Overloaded function for demo (default values)
 void calculateVolume() {
     float base = 5.0;
     float height = 10.0;
-    float volume = (1.0 / 3.0)
-    * base * base * height;
+    float volume = (1.0 / 3.0) * base * base * height;
+    std::cout << "[Demo] Using Base = 5.0, Height = 10.0\n";
     std::cout << "[Demo] Volume of the square pyramid: "
-    << volume << " cubic units.\n";
+              << volume << " cubic units.\n";
 }
 
-int main() {  // Main function
-    int numTries;  // Local variable to main
+int main() {
+    int numTries;
 
     std::cout << "Welcome to the Square Pyramid Volume Calculator!\n";
 
     // Input number of calculations
     while (true) {
-        std::cout << "How many calculations"
-        " would you like to do? ";
+        std::cout << "How many calculations would you like to do? ";
         std::cin >> numTries;
-        // If input fails, or numtries is below 0
+
         if (std::cin.fail() || numTries <= 0) {
             std::cin.clear();  // clear error flags
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -58,9 +57,9 @@ int main() {  // Main function
             std::cin >> demoChoice;
 
             if (demoChoice == "yes") {
-                std::cout << "Base = 5.0, Height = 10.0";
                 calculateVolume();  // Call overloaded function
                 break;
+
             } else if (demoChoice == "no") {
                 float base, height;
 
@@ -69,14 +68,14 @@ int main() {  // Main function
                     std::cout << "Enter the base length (0 - 1000): ";
                     std::cin >> base;
 
-                    if (std::cin.fail()) {  // Catch wrong user input
+                    if (std::cin.fail()) {
                         std::cin.clear();
                         std::cin.ignore(std::numeric_limits
                             <std::streamsize>::max(), '\n');
                         std::cout << "Invalid input."
                         "Please enter a floating-point number.\n";
-                        // Restrictions for input
-                    } else if (base > MIN_VALUE && base <= MAX_VALUE) {
+                    } else if (base > MIN_VALUE && base
+                        <= MAX_VALUE) {
                         break;
                     } else {
                         std::cout << "Base must be greater than 0"
@@ -92,9 +91,10 @@ int main() {  // Main function
                         std::cin.clear();
                         std::cin.ignore(std::numeric_limits
                             <std::streamsize>::max(), '\n');
-                        std::cout << "Invalid input."
-                        "Please enter a floating-point number.\n";
-                    } else if (height > MIN_VALUE && height <= MAX_VALUE) {
+                        std::cout << "Invalid input. Please"
+                        "enter a floating-point number.\n";
+                    } else if (height > MIN_VALUE && height
+                        <= MAX_VALUE) {
                         break;
                     } else {
                         std::cout << "Height must be greater than"
@@ -102,8 +102,7 @@ int main() {  // Main function
                     }
                 }
 
-                // Call function with user input
-                calculateVolume(base, height);
+                calculateVolume(base, height);  // Call function with user input
                 break;
 
             } else {
