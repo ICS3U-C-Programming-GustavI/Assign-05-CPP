@@ -1,5 +1,5 @@
 // Copyright (c) 2025 Gustav I
-// Created By: Gustav I
+// Created By: Gustav I.
 // Date: May 19, 2025
 // This program calculates the volume of a square pyramid using user input
 // and demonstrates function overloading, input validation, and loops.
