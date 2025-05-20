@@ -4,9 +4,6 @@
 // This program calculates the volume of a square pyramid using user input
 // and demonstrates function overloading, input validation, and loops.
 
-std::cout << "How many calculations would you like to do? ";
-        std::cin >> numTries;
-
 #include <iostream>
 #include <limits>  // For numeric_limits
 #include <string>
